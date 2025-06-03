@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="src/style.css" rel="stylesheet">
+  <title>Document</title>
+
+  <script type="module" src="/src/main.js"></script>
+
+</head>
+<body id="body" class="bg-main-color-lm transition-colors duration-500">
+  
+  <header>
+    <nav class="relative w-full px-4 md:px-40 py-5 flex items-center justify-between" role="navigation" aria-label="Main navigation">
+      <div class="text-lg font-medium text-main-text-lm">AM</div>
+      <button
+        id="menu-btn"
+        class="text-2xl md:hidden z-20 ml-auto"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+        aria-label="Abrir menú"
+      >
+        <svg class="text-main-text-lm rounded-full w-8 h-8" id="menu-icon">
+          <use xlink:href="/assets/sprite.svg#btn-navbar"></use>
+        </svg>
+      </button>
+      <ul class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 space-x-6 text-main-text-lm text-base">
+        <li><a href="#" class="hover:underline">Home</a></li>
+        <li><a href="#showcase" class="hover:underline">Playground</a></li>
+        <li><a href="#contact" class="hover:underline">Contact</a></li>
+      </ul>
+    </nav>
+
+  <!-- Modal de menu mobile -->
+  <div
+    id="mobile-menu"
+    class="fixed inset-0 bg-main-color-lm z-10 flex flex-col items-center justify-center gap-6 text-xl font-medium text-main-text-lm hidden transition-opacity duration-300"
+    role="dialog"
+    aria-modal="true"
+  >
+    <a href="#hero" class="hover:underline">Home</a>
+    <a href="#showcase" class="hover:underline">Playground</a>
+    <a href="#contact" class="hover:underline">Contact</a>   
+  </div>
+
+  </header>  
+
+  <main>
+    <section id="hero" class="pt-70 pb-60 mb-44 px-5 md:px-40 lg:flex lg:flex-row lg:justify-start gap-4">
+
+      <div id="text1-container" class="md:flex md:flex-row items-center">
+        <h1 id="text1" class="text-secondary-text-lm text-xl xl:text-2xl font-light"></h1>      
+      </div>
+
+      <div class="md:flex md:flex-col">
+        <div>
+          <h1 class="toggling-text text-main-text-lm text-5xl md:text-7xl xl:text-8xl animate-fade-in">Just Another IT Guy</h1>
+        </div>
+        <div>
+          <h2 id="text2" class="text-tertiary-text-lm font-medium opacity-0">I'm just learning tho</h2>
+        </div>
+      </div>
+    </section>
+
+    <div id="floating-button" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 text-center cursor-pointer transition-opacity duration-300">
+      <p class="text-2xl xl:text-4xl text-main-color-dm font-thin">Projects</p>
+      <div class="animate-bouncing text-xl text-main-color-dm">↓</div>
+    </div>
+
+    <section id="showcase" class="px-5 md:mx-24 py-24">
+      
+      <h1 id="real-title" class="py-10 mb-20 text-main-text-dm text-5xl text-center opacity-0 transition-opacity duration-50">My Projects</h1>
+      
+      <div class="grid grid-cols-2 gap-5 md:gap-20">
+        <div id="toggling-text" class="col-span-1 border-1 text-main-color-lm rounded-2xl border-main-color-lm flex flex-col items-center py-16">
+          <h2 class="mx-3 text-2xl">Adapting this very site to React</h2>
+          <a href="#">Enlace al ...</a>
+        </div>
+        <div id="toggling-text" class="col-span-1 border-1 text-main-color-lm rounded-2xl border-main-color-lm flex flex-col items-center py-16">
+          <h2 class="mx-3 text-2xl">An Ecommerce Site using React+TS: Comming Soon</h2>
+          <a href="#">Enlace al ...</a>
+        </div>
+        <div id="toggling-text" class="col-span-1 border-1 text-main-color-lm rounded-2xl border-main-color-lm flex flex-col items-center py-16">
+          <h2 class="mx-3 text-2xl">I'll come up with something.</h2>
+          <a href="#">Enlace al ...</a>
+        </div>
+        <div id="toggling-text" class="col-span-1 border-1 text-main-color-lm rounded-2xl border-main-color-lm flex flex-col items-center py-16">
+          <h2 class="mx-3 text-2xl">Sample text</h2>
+          <a href="#">Enlace al ...</a>
+        </div>
+      </div>
+    </section>
+  
+    <section id="about" class="mt-12 flex flex-col items-center justify-around px-5">
+      <div id="about-me" class="flex flex-col items-center w-11/12 md:w-9/12 lg:w-8/12 gap-14">
+        <h1 class="toggling-text text-main-text-dm text-5xl">About me</h1>
+        <p class="md:my-20 md:text-left text-xl font-thin md:font-normal text-main-color-dm">I'm a Computer Science Engineering student from <span class="toggle-arg text-argentino">Argentina</span>. I'm really passionate about almost everything related to technology. I'm on a journey to find the area in IT that excites me the most, constantly learning and building along the way.</p>
+      </div>
+      
+      <div id="socials-and-stack" class="md:flex md:justify-evenly gap-80 pt-20">
+        <div id="socials">
+          <ul>
+            <li class="p-2 md:py-6">
+              <a href="https://github.com/managustin" target="_blank" aria-label="github" class="flex items-center gap-2 group toggling-text">
+                <svg class="w-10 h-10 md:w-16 md:h-16 text-main-color-dm group-hover:text-secondary-text transition-colors duration-200">
+                  <use xlink:href="/assets/sprite.svg#github"></use>
+                </svg>managustin
+              </a>
+            </li>
+            <li class="p-2 md:py-6">
+              <a href="https://www.linkedin.com/in/managustin/" target="_blank" aria-label="linkedin" class="flex items-center gap-2 group toggling-text">
+                <svg class="w-10 h-10 md:w-16 md:h-16 text-main-color-dm group-hover:text-secondary-text transition-colors duration-200">
+                  <use xlink:href="/assets/sprite.svg#linkedin"></use>
+                </svg>managustin
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div id="stack" class="max-md:mt-24">
+          <h1 class="toggling-text text-main-text-dm text-5xl text-center">My Stack</h1>
+          <div class="pt-10 flex justify-center gap-8">
+              <div>
+                <svg class="w-10 h-10 md:w-16 md:h-16 text-[#E34F26] hover:scale-110 transition-transform">
+                  <use xlink:href="/assets/sprite.svg#html"></use>
+                </svg>
+              </div>
+              <div>
+                <svg class="w-10 h-10 md:w-16 md:h-16 text-[#F7DF1E] hover:scale-110 transition-transform">
+                  <use xlink:href="/assets/sprite.svg#javascript"></use>
+                </svg>
+              </div>
+              <div>
+                <svg class="w-10 h-10 md:w-16 md:h-16 text-[#61DAFB] hover:scale-110 hover:animate-spin-clockwise transition-all duration-200">
+                  <use xlink:href="/assets/sprite.svg#react"></use>
+                </svg>
+              </div>
+          </div>
+      </div>
+      
+    </section>
+
+    <section id="contact" class="mt-35 flex flex-col items-center">
+      <h1 class="text-5xl text-main-text-lm mb-8">Let's Talk</h1>
+      <div class="w-full max-w-xl">
+        <form id="contact-form" action="" class="dark:bg-main-color-dm rounded-xl shadow-2xl shadow-english-violet p-10 flex flex-col gap-6">
+          <div class="flex flex-col gap-2">
+            <label for="name-field" class="text-lg font-semibold text-main-text-dm">Name</label>
+            <input id="name-field" name="name" type="text" placeholder="Your name" class="rounded-lg px-4 py-3 bg-platinum/60 focus:bg-white focus:outline-none focus:ring-2 focus:ring-argentino text-main-color-lm placeholder:text-gray-500 transition-all duration-200 shadow-sm" required>
+          </div>
+          <div class="flex flex-col gap-2">
+            <label for="email-field" class="text-lg font-semibold text-main-text-dm">Email</label>
+            <input id="email-field" name="email" type="email" placeholder="Your Email" class="rounded-lg px-4 py-3 bg-platinum/60 focus:bg-white focus:outline-none focus:ring-2 focus:ring-argentino text-main-color-lm placeholder:text-gray-500 transition-all duration-200 shadow-sm" required>
+          </div>
+          <div class="flex flex-col gap-2">
+            <label for="message-area" class="text-lg font-semibold text-main-text-dm">Message</label>
+            <textarea name="message" id="message-area" rows="5" placeholder="Write your message..." class="rounded-lg px-4 py-3 bg-platinum/60 focus:bg-white focus:outline-none focus:ring-2 focus:ring-argentino text-main-color-lm placeholder:text-gray-500 transition-all duration-200 shadow-sm resize-none" required></textarea>
+          </div>
+          <div class="flex justify-center mt-4">
+            <button type="submit" class="flex items-center gap-2 px-8 py-3 rounded-full bg-secondary-text-lm text-white font-semibold text-lg shadow-lg hover:bg-blue-500 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-300">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954 8.955c.44.439 1.152.439 1.591 0L21.75 12M12 21.75V2.25"/></svg>
+              Send
+            </button>
+          </div>
+        </form>
+
+    </section>
+
+    <footer class="bg-main-text-dm mt-45 py-15 ">
+      <div class="flex justify-center">
+        <div class="w-3/5">
+          <h2 class="text-main-color-dm text-2xl pb-4">Agustín Mango</h2>
+          <ul class="text-main-text-lm text-base">
+            <li><a href="#" class="hover:underline">Home</a></li>
+            <li><a href="#showcase" class="hover:underline">Playground</a></li>
+            <li><a href="#contact" class="hover:underline">Contact</a></li>
+          </ul>
+          <p class="text-main-color-dm mt-4">2025</p>
+        </div>
+      </div>
+    </footer>
+  </main>
+</body>
+</html>

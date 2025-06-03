@@ -1,0 +1,65 @@
+@import "tailwindcss";
+@plugin "@midudev/tailwind-animations";
+
+@font-face {
+  font-family: 'Outfit';
+  src: url('./assets/fonts/Outfit-Thin.woff2') format('woff2');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Outfit';
+  src: url('./assets/fonts/Outfit-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Outfit';
+  src: url('./assets/fonts/Outfit-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Outfit';
+  src: url('./assets/fonts/Outfit-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Outfit';
+  src: url('./assets/fonts/Outfit-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --color-raisin-black: #202030;
+  --color-english-violet: #39304A;
+  --color-platinum: #DFE0DC;
+  --color-timberwolf: #EADEDA;
+  --color-argentino: #5DA9E9; 
+
+  /*colores claros*/
+  --color-main-color-lm: #3D3D3D;
+  
+
+  /*colores oscuros*/
+  --color-main-color-dm: #E4FDE1;
+
+  /*colores claros para el texto*/
+  --color-main-text-lm: #E9FFF7;
+  --color-secondary-text-lm: #B967D8;
+  --color-tertiary-text-lm: rgba(233, 255, 247, 0.5); /* 50% opacidad */
+  
+  /*colores oscuros para el texto*/
+  --color-main-text-dm: #39304A;
+  --color-secondary-text-dm: #3D3D3D;
+  --color-tertiary-text-dm: #3D3D3D;
+
+  --font-sans: 'Outfit', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}

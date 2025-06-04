@@ -11,47 +11,39 @@
   <script type="module" src="/src/main.js"></script>
 
 </head>
-<body id="body" class="bg-main-color-lm transition-colors duration-500">
-  
+<body id="body" class="bg-main-color-lm transition-colors duration-500 scroll-smooth">
+  <ul id="sidebar" class="hidden fixed top-0 right-0 h-screen w-full md:w-64 z-50 list-none bg-main-text-dm flex-col items-start justify-start transition-opacity duration-300 ease-in-out opacity-0">
+            <li id="menu-btn-close" class="mr-auto w-full">
+                <a class="h-12 w-full px-4 flex items-center" href="#">
+                    <svg class="w-8 h-8">
+                        <use xlink:href="/assets/sprite.svg#btn-close"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="w-full"><a class="h-12 w-full px-4 flex items-center" href="#hero">Home</a></li>
+            <li class="w-full"><a class="h-12 w-full px-4 flex items-center" href="#showcase">Playground</a></li>
+            <li class="w-full"><a class="h-12 w-full px-4 flex items-center" href="#contact">Contact</a></li>
+        </ul>
   <header>
-    <nav class="relative w-full px-4 md:px-40 py-5 flex items-center justify-between" role="navigation" aria-label="Main navigation">
-      <div class="text-lg font-medium text-main-text-lm">AM</div>
-      <button
-        id="menu-btn"
-        class="text-2xl md:hidden z-20 ml-auto"
-        aria-expanded="false"
-        aria-controls="mobile-menu"
-        aria-label="Abrir menú"
-      >
-        <svg class="text-main-text-lm rounded-full w-8 h-8" id="menu-icon">
-          <use xlink:href="/assets/sprite.svg#btn-navbar"></use>
-        </svg>
-      </button>
-      <ul class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 space-x-6 text-main-text-lm text-base">
-        <li><a href="#" class="hover:underline">Home</a></li>
-        <li><a href="#showcase" class="hover:underline">Playground</a></li>
-        <li><a href="#contact" class="hover:underline">Contact</a></li>
-      </ul>
+    <nav class="toggling-text text-xl fixed w-full transition-transform duration-300 top-0 px-40">
+        
+        <ul class="pr-10 w-full list-none flex justify-end items-center">
+            <li class="item-of-list  mr-auto"><a class="h-1 px-4 flex items-center" href="#">AM</a></li>
+            <li class="item-of-list hidden md:block"><a class="h-16 px-4 flex items-center" href="#">Home</a></li>
+            <li class="item-of-list hidden md:block"><a class="h-16 px-4 flex items-center" href="#showcase">Playground</a></li>
+            <li class="item-of-list hidden md:block"><a class="h-16 px-4 flex items-center" href="#contact">Contact</a></li>
+            <li id="menu-btn"><a class="item-of-list flex h-12 px-4 md:hidden items-center" href="#"><svg class="text-main-text-lm rounded-full w-8 h-8" id="menu-icon">
+            <use xlink:href="/assets/sprite.svg#btn-navbar"></use>
+            </svg></a></li>
+        </ul>
     </nav>
-
-  <!-- Modal de menu mobile -->
-  <div
-    id="mobile-menu"
-    class="fixed inset-0 bg-main-color-lm z-10 flex flex-col items-center justify-center gap-6 text-xl font-medium text-main-text-lm hidden transition-opacity duration-300"
-    role="dialog"
-    aria-modal="true"
-  >
-    <a href="#hero" class="hover:underline">Home</a>
-    <a href="#showcase" class="hover:underline">Playground</a>
-    <a href="#contact" class="hover:underline">Contact</a>   
-  </div>
 
   </header>  
 
   <main>
-    <section id="hero" class="pt-70 pb-60 mb-44 px-5 md:px-40 lg:flex lg:flex-row lg:justify-start gap-4">
+    <section id="hero" class="z-0 pt-70 pb-60 mb-44 px-5 md:px-40 lg:flex lg:flex-row lg:justify-start gap-4">
 
-      <div id="text1-container" class="md:flex md:flex-row items-center">
+      <div id="text1-container" class="md:ml-4 md:flex md:flex-row items-center">
         <h1 id="text1" class="text-secondary-text-lm text-xl xl:text-2xl font-light"></h1>      
       </div>
 

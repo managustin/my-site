@@ -47,9 +47,10 @@
   /*colores claros*/
   --color-main-color-lm: #3D3D3D;
   
-
   /*colores oscuros*/
   --color-main-color-dm: #E4FDE1;
+
+  --color-links-hover: #4F4F4F;
 
   /*colores claros para el texto*/
   --color-main-text-lm: #E9FFF7;
@@ -63,4 +64,3 @@
 
   --font-sans: 'Outfit', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
-B967D8

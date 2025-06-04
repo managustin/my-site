@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="src/style.css" rel="stylesheet">
+    <title>Navbar</title>
+    <script type="module" src="/src/js/navbartest.js"></script>
+</head>
+<body>
+    <nav class="bg-amber-300 fixed w-full transition-transform duration-300 top-0">
+        <ul id="sidebar" class="hidden fixed top-0 right-0 h-screen w-full md:w-64 z-10 list-none bg-green-800 backdrop-blur-md flex-col items-start justify-start transition-opacity duration-300 ease-in-out opacity-0">
+            <li id="menu-btn-close" class="mr-auto w-full">
+                <a class="h-12 w-full px-4 flex items-center" href="#">
+                    <svg class="w-8 h-8">
+                        <use xlink:href="/assets/sprite.svg#btn-close"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="w-full"><a class="h-12 w-full px-4 flex items-center hover:bg-amber-800" href="#">Home</a></li>
+            <li class="w-full"><a class="h-12 w-full px-4 flex items-center hover:bg-amber-800" href="#">Playground</a></li>
+            <li class="w-full"><a class="h-12 w-full px-4 flex items-center hover:bg-amber-800" href="#">Contact</a></li>
+        </ul>
+        <ul class="w-full list-none flex justify-end items-center">
+            <li class="mr-auto"><a class="h-12 px-4 flex items-center hover:bg-amber-800" href="#">AM</a></li>
+            <li class="hidden md:block"><a class="h-12 px-4 flex items-center hover:bg-amber-800" href="#">Home</a></li>
+            <li class="hidden md:block"><a class="h-12 px-4 flex items-center hover:bg-amber-800" href="#">Playground</a></li>
+            <li class="hidden md:block"><a class="h-12 px-4 flex items-center hover:bg-amber-800" href="#">Contact</a></li>
+            <li id="menu-btn"><a class="flex h-12 px-4 md:hidden items-center hover:bg-amber-800" href="#"><svg class="text-main-text-lm rounded-full w-8 h-8" id="menu-icon">
+            <use xlink:href="/assets/sprite.svg#btn-navbar"></use>
+            </svg></a></li>
+        </ul>
+    </nav>
+
+    <main class="mt-12">
+        <section>
+            <div>
+                <h1 class="mt-90">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima voluptatem perferendis quisquam commodi neque facere possimus, ad fugit dolor dolore vitae, unde repellendus recusandae explicabo maxime quos aliquid, quis consequatur!
+                </h1>
+                <h1 class="mt-90">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima voluptatem perferendis quisquam commodi neque facere possimus, ad fugit dolor dolore vitae, unde repellendus recusandae explicabo maxime quos aliquid, quis consequatur!
+                </h1>
+                <h1 class="mt-90">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima voluptatem perferendis quisquam commodi neque facere possimus, ad fugit dolor dolore vitae, unde repellendus recusandae explicabo maxime quos aliquid, quis consequatur!
+                </h1>
+                <h1 class="mt-90">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima voluptatem perferendis quisquam commodi neque facere possimus, ad fugit dolor dolore vitae, unde repellendus recusandae explicabo maxime quos aliquid, quis consequatur!
+                </h1>
+                <h1 class="mt-90">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima voluptatem perferendis quisquam commodi neque facere possimus, ad fugit dolor dolore vitae, unde repellendus recusandae explicabo maxime quos aliquid, quis consequatur!
+                </h1>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

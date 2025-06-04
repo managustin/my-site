@@ -5,6 +5,8 @@ export function setupThemeObserver() {
   const heroThirdText = document.getElementById("text2");
   const argColor = document.querySelector(".toggle-arg");
   const triggerSection = document.getElementById("showcase");
+  const navLinks = document.querySelectorAll(".item-of-list");
+  const navbar = document.querySelector("nav");
 
   const observer = new IntersectionObserver(
     ([entry]) => {
@@ -17,6 +19,13 @@ export function setupThemeObserver() {
           el.classList.remove("text-main-text-lm");
           el.classList.add("text-main-text-dm");
         });
+
+        //cambiar navbar
+        navLinks.forEach(link => {
+          navbar.classList.remove("bg-main-color-lm")
+          navbar.classList.add("bg-main-color-dm")
+        });
+
         //cambio el secondary text
         heroSecondText.classList.remove("text-secondary-text-lm");
         heroSecondText.classList.add("text-secondary-text-dm");
@@ -43,6 +52,13 @@ export function setupThemeObserver() {
         //revierto el argColor text
         argColor.classList.add("text-argentino");
         argColor.classList.remove("text-main-text-lm");
+
+        //revierto el navbar
+        navLinks.forEach(link => {
+          link.classList.add("hover:text-main-text-lm", "hover:bg-links-hover")
+          navbar.classList.remove("bg-main-color-dm")
+          navbar.classList.add("bg-main-color-lm")
+        });
       }
     },
     {

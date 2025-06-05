@@ -12,23 +12,25 @@
 
 </head>
 <body id="body" class="bg-main-color-lm transition-colors duration-500 scroll-smooth">
-  <ul id="sidebar" class="hidden fixed top-0 right-0 h-screen w-full md:w-64 z-50 list-none bg-main-text-dm flex-col items-start justify-start transition-opacity duration-300 ease-in-out opacity-0">
-            <li id="menu-btn-close" class="mr-auto w-full">
-                <a class="h-12 w-full px-4 flex items-center" href="#">
-                    <svg class="w-8 h-8">
-                        <use xlink:href="/assets/sprite.svg#btn-close"></use>
-                    </svg>
-                </a>
-            </li>
-            <li class="w-full"><a class="h-12 w-full px-4 flex items-center" href="#hero">Home</a></li>
-            <li class="w-full"><a class="h-12 w-full px-4 flex items-center" href="#showcase">Playground</a></li>
-            <li class="w-full"><a class="h-12 w-full px-4 flex items-center" href="#contact">Contact</a></li>
-        </ul>
+  <ul id="sidebar" class="text-main-color-dm hidden fixed top-0 right-0 h-screen w-full md:w-64 z-50 list-none bg-main-text-dm flex-col transition-opacity duration-300 ease-in-out opacity-0">
+    
+    <li class="w-full"><a class="h-12 w-full px-4 flex justify-center text-xl text-left" href="#hero">Home</a></li>
+    <li class="w-full"><a class="h-12 w-full px-4 flex justify-center text-xl text-left" href="#showcase">Playground</a></li>
+    <li class="w-full"><a class="h-12 w-full px-4 flex justify-center text-xl text-left" href="#contact">Contact</a></li>
+
+    <li id="menu-btn-close" class="mr-auto w-full mt-8">
+        <a class="h-12 w-full px-4 flex justify-center text-left" href="#">
+            <svg class="w-10 h-10">
+                <use xlink:href="/assets/sprite.svg#btn-close"></use>
+            </svg>
+        </a>
+    </li>
+  </ul>
   <header>
-    <nav class="toggling-text text-xl fixed w-full transition-transform duration-300 top-0 px-40">
+    <nav class="bg-main-color-lm toggling-text text-xl fixed w-full transition-transform duration-300 top-0 md:px-40">
         
-        <ul class="pr-10 w-full list-none flex justify-end items-center">
-            <li class="item-of-list  mr-auto"><a class="h-1 px-4 flex items-center" href="#">AM</a></li>
+        <ul class="md:pr-10 w-full list-none flex justify-end items-center">
+            <li class="item-of-list  mr-auto"><a class="h-16 px-4 flex items-center" href="#">AM</a></li>
             <li class="item-of-list hidden md:block"><a class="h-16 px-4 flex items-center" href="#">Home</a></li>
             <li class="item-of-list hidden md:block"><a class="h-16 px-4 flex items-center" href="#showcase">Playground</a></li>
             <li class="item-of-list hidden md:block"><a class="h-16 px-4 flex items-center" href="#contact">Contact</a></li>
@@ -57,38 +59,38 @@
       </div>
     </section>
 
-    <div id="floating-button" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 text-center cursor-pointer transition-opacity duration-300">
+    <div id="floating-button" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-10 text-center cursor-pointer transition-opacity duration-300">
       <p class="text-2xl xl:text-4xl text-main-color-dm font-thin">Projects</p>
       <div class="animate-bouncing text-xl text-main-color-dm">↓</div>
     </div>
 
-    <section id="showcase" class="px-5 md:mx-24 py-24">
+    <section id="showcase" class="mx-2 md:mx-40 py-24">
       
-      <h1 id="real-title" class="py-10 mb-20 text-main-text-dm text-5xl text-center opacity-0 transition-opacity duration-50">My Projects</h1>
+      <h1 id="real-title" class="py-10 mb-20 text-main-text-dm text-4xl md:text-5xl text-center opacity-0 transition-opacity duration-50">My Projects</h1>
       
       <div class="grid grid-cols-2 gap-5 md:gap-20">
-        <div id="toggling-text" class="col-span-1 border-1 text-main-color-lm rounded-2xl border-main-color-lm flex flex-col items-center py-16">
-          <h2 class="mx-3 text-2xl">Adapting this very site to React</h2>
-          <a href="#">Enlace al ...</a>
+        <div id="toggling-text" class="col-span-1 border-1 text-main-color-lm rounded-2xl border-main-color-lm flex flex-col items-center p-3 md:py-16">
+          <h2 class="text-xl">Adapting this very site to React</h2>
+          <a href="#">Check out the repo ...</a>
         </div>
-        <div id="toggling-text" class="col-span-1 border-1 text-main-color-lm rounded-2xl border-main-color-lm flex flex-col items-center py-16">
-          <h2 class="mx-3 text-2xl">An Ecommerce Site using React+TS: Comming Soon</h2>
-          <a href="#">Enlace al ...</a>
+        <div id="toggling-text" class="col-span-1 border-1 text-main-color-lm rounded-2xl border-main-color-lm flex flex-col items-center p-3 md:py-16">
+          <h2 class="text-xl">An Ecommerce Site using React+TS: Comming Soon</h2>
+          <a href="#">Check out the repo ...</a>
         </div>
-        <div id="toggling-text" class="col-span-1 border-1 text-main-color-lm rounded-2xl border-main-color-lm flex flex-col items-center py-16">
-          <h2 class="mx-3 text-2xl">I'll come up with something.</h2>
-          <a href="#">Enlace al ...</a>
+        <div id="toggling-text" class="col-span-1 border-1 text-main-color-lm rounded-2xl border-main-color-lm flex flex-col items-center p-3 md:py-16">
+          <h2 class="text-xl">I'll come up with something.</h2>
+          <a href="#">Check out the repo ...</a>
         </div>
-        <div id="toggling-text" class="col-span-1 border-1 text-main-color-lm rounded-2xl border-main-color-lm flex flex-col items-center py-16">
-          <h2 class="mx-3 text-2xl">Sample text</h2>
-          <a href="#">Enlace al ...</a>
+        <div id="toggling-text" class="col-span-1 border-1 text-main-color-lm rounded-2xl border-main-color-lm flex flex-col items-center p-3 md:py-16">
+          <h2 class="text-xl">Próximamente</h2>
+          <a href="#">Check out the repo ...</a>
         </div>
       </div>
     </section>
   
     <section id="about" class="mt-12 flex flex-col items-center justify-around px-5">
       <div id="about-me" class="flex flex-col items-center w-11/12 md:w-9/12 lg:w-8/12 gap-14">
-        <h1 class="toggling-text text-main-text-dm text-5xl">About me</h1>
+        <h1 class="toggling-text text-main-text-dm text-4xl md:text-5xl">About me</h1>
         <p class="md:my-20 md:text-left text-xl font-thin md:font-normal text-main-color-dm">I'm a Computer Science Engineering student from <span class="toggle-arg text-argentino">Argentina</span>. I'm really passionate about almost everything related to technology. I'm on a journey to find the area in IT that excites me the most, constantly learning and building along the way.</p>
       </div>
       
@@ -112,7 +114,7 @@
           </ul>
         </div>
         <div id="stack" class="max-md:mt-24">
-          <h1 class="toggling-text text-main-text-dm text-5xl text-center">My Stack</h1>
+          <h1 class="toggling-text text-main-text-dm text-3xl md:text-4xl text-center">My Stack</h1>
           <div class="pt-10 flex justify-center gap-8">
               <div>
                 <svg class="w-10 h-10 md:w-16 md:h-16 text-[#E34F26] hover:scale-110 transition-transform">
@@ -135,7 +137,7 @@
     </section>
 
     <section id="contact" class="mt-35 flex flex-col items-center">
-      <h1 class="text-5xl text-main-text-lm mb-8">Let's Talk</h1>
+      <h1 class="text-4xl md:text-5xl text-main-text-lm mb-8">Let's Talk</h1>
       <div class="w-full max-w-xl">
         <form id="contact-form" action="" class="dark:bg-main-color-dm rounded-xl shadow-2xl shadow-english-violet p-10 flex flex-col gap-6">
           <div class="flex flex-col gap-2">

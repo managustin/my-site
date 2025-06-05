@@ -15,12 +15,11 @@ export function setupMobileNavbar() {
 
   function showModal(){
       menuModal.classList.remove('hidden');
+      menuModal.classList.add('flex', 'justify-center', 'items-center');
       // Forzamos un reflow para que la transición funcione
       menuModal.offsetHeight;
       menuModal.classList.remove('opacity-0');
-      menuModal.classList.add('flex', 'opacity-100');
-      console.log('visible:', menuModal.classList);
-
+      menuModal.classList.add('opacity-100');
   }
 
   function closeModal(){
@@ -34,10 +33,24 @@ export function setupMobileNavbar() {
       }, 300); // 300ms = duración de la transición
   }
 
-  menuLinks.forEach(link => {
-  link.addEventListener("click", closeModal);
-  });
+    menuLinks.forEach(link => {
+    link.addEventListener("click", (e) => {
+        e.preventDefault(); // evitar salto brusco
 
+        const targetId = link.getAttribute("href");
+        const targetEl = document.querySelector(targetId);
+
+        if (targetEl) {
+        targetEl.scrollIntoView({
+            behavior: "smooth"
+        });
+        }
+
+        closeModal(); // cerrar el menú modal
+    });
+    });
+
+  
 
   //control del scroll
 

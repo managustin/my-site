@@ -27,11 +27,11 @@
     </li>
   </ul>
   <header>
-    <nav class="bg-main-color-lm toggling-text text-xl fixed w-full transition-transform duration-300 top-0 md:px-40">
+    <nav class="z-10 bg-main-color-lm toggling-text text-xl fixed w-full transition-transform duration-300 top-0 md:px-40">
         
         <ul class="md:pr-10 w-full list-none flex justify-end items-center">
             <li class="item-of-list  mr-auto"><a class="h-16 px-4 flex items-center" href="#">AM</a></li>
-            <li class="item-of-list hidden md:block"><a class="h-16 px-4 flex items-center" href="#">Home</a></li>
+            <li class="item-of-list hidden md:block"><a class="h-16 px-4 flex items-center" href="#hero">Home</a></li>
             <li class="item-of-list hidden md:block"><a class="h-16 px-4 flex items-center" href="#showcase">Playground</a></li>
             <li class="item-of-list hidden md:block"><a class="h-16 px-4 flex items-center" href="#contact">Contact</a></li>
             <li id="menu-btn"><a class="item-of-list flex h-12 px-4 md:hidden items-center" href="#"><svg class="text-main-text-lm rounded-full w-8 h-8" id="menu-icon">
@@ -43,7 +43,7 @@
   </header>  
 
   <main>
-    <section id="hero" class="z-0 pt-70 pb-60 mb-44 px-5 md:px-40 lg:flex lg:flex-row lg:justify-start gap-4">
+    <section id="hero" class="pt-70 pb-60 md:mb-44 px-5 md:px-40 lg:flex lg:flex-row lg:justify-start gap-4">
 
       <div id="text1-container" class="md:ml-4 md:flex md:flex-row items-center">
         <h1 id="text1" class="text-secondary-text-lm text-xl xl:text-2xl font-light"></h1>      
@@ -59,10 +59,10 @@
       </div>
     </section>
 
-    <div id="floating-button" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-10 text-center cursor-pointer transition-opacity duration-300">
+    <button id="floating-button" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-10 text-center cursor-pointer transition-opacity duration-300">
       <p class="text-2xl xl:text-4xl text-main-color-dm font-thin">Projects</p>
       <div class="animate-bouncing text-xl text-main-color-dm">↓</div>
-    </div>
+    </button>
 
     <section id="showcase" class="mx-2 md:mx-40 py-24">
       

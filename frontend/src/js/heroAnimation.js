@@ -1,17 +1,20 @@
 // heroAnimation.js
+import { translations } from './translations.js';
+
 export function animateHero() {
-  const text = "Trying not to be";
+  const userLang = localStorage.getItem('appLang') || (navigator.language.startsWith('es') ? 'es' : 'en');
+  const text = translations[userLang]["hero.trying"];
   const textContainer = document.getElementById("text1");
   const wrapper = document.getElementById("text1-container");
   const subheading = document.getElementById("text2");
 
   let index = 0;
 
-//   // Paso 1: Mostrar inmediatamente el texto principal
-//   const mainText = document.getElementById("main-text");
-//   mainText.classList.add("animate-fade-in");
+  //   // Paso 1: Mostrar inmediatamente el texto principal
+  //   const mainText = document.getElementById("main-text");
+  //   mainText.classList.add("animate-fade-in");
 
-// Crear cursor
+  // Crear cursor
   const cursor = document.createElement("span");
   cursor.textContent = "|";
   cursor.classList.add("ml-1", "text-secondary-text", "animate-blink");

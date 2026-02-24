@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @plugin "@midudev/tailwind-animations";
 
+
 @font-face {
   font-family: 'Outfit';
   src: url('./assets/fonts/Outfit-Thin.woff2') format('woff2');

@@ -7,6 +7,9 @@ export function setupThemeObserver() {
   const triggerSection = document.getElementById("showcase");
   const navLinks = document.querySelectorAll(".item-of-list");
   const navbar = document.querySelector("nav");
+  
+  // Agregamos la referencia al canvas
+  const canvas = document.getElementById("networkCanvas");
 
   const observer = new IntersectionObserver(
     ([entry]) => {
@@ -35,6 +38,10 @@ export function setupThemeObserver() {
         //cambio el argColor text
         argColor.classList.remove("text-argentino");
         argColor.classList.add("text-main-text-lm");
+        
+        // Ocultamos el canvas suavemente
+        if (canvas) canvas.style.opacity = "0";
+
       } else {
         body.classList.remove("bg-main-color-dm");
         body.classList.add("bg-main-color-lm");
@@ -59,6 +66,9 @@ export function setupThemeObserver() {
           navbar.classList.remove("bg-main-color-dm")
           navbar.classList.add("bg-main-color-lm")
         });
+        
+        // Mostramos el canvas de nuevo
+        if (canvas) canvas.style.opacity = "1";
       }
     },
     {

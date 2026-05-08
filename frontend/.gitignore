@@ -24,3 +24,6 @@ dist-ssr
 *.sw?
 
 .env
+
+# cuestiones de desarrollo
+/FRONTEND_GUIDE.md

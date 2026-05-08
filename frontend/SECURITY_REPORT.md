@@ -194,32 +194,32 @@ Explicitly disables access to sensitive browser APIs that this application does 
 
 ## Phase 4: Post-Mitigation Validation
 
-### 4.1 Expected Response Headers
+### 4.1 Verified Response Headers
 
-After deploying the `vercel.json` configuration, the expected output of `curl -I` should be:
+After deploying the `vercel.json` configuration, the following `curl -I` output confirms that all security headers are correctly injected:
 
 ```
-~ ▓▒░ curl -I https://managustin.vercel.app/
+~ ▓▒░ curl -I https://managustin.vercel.app/                                                     ░▒▓ ✔  25s  12:52:14
 HTTP/2 200
 accept-ranges: bytes
 access-control-allow-origin: *
-age: 0
+age: 84
 cache-control: public, max-age=0, must-revalidate
 content-disposition: inline
+content-security-policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; connect-src 'self' https://api.emailjs.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'
 content-type: text/html; charset=utf-8
-date: Fri, 08 May 2026 xx:xx:xx GMT
-etag: "..."
-last-modified: Fri, 08 May 2026 xx:xx:xx GMT
+date: Fri, 08 May 2026 14:42:50 GMT
+etag: "7083d1ce8e2e0eb911de0e02c7bb39e9"
+last-modified: Fri, 08 May 2026 14:41:25 GMT
+permissions-policy: camera=(), microphone=(), geolocation=()
+referrer-policy: strict-origin-when-cross-origin
 server: Vercel
 strict-transport-security: max-age=63072000; includeSubDomains; preload
-content-security-policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; connect-src 'self' https://api.emailjs.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'  ← NEW
-x-frame-options: DENY                                                        ← NEW
-x-content-type-options: nosniff                                              ← NEW
-referrer-policy: strict-origin-when-cross-origin                             ← NEW
-permissions-policy: camera=(), microphone=(), geolocation=()                 ← NEW
+x-content-type-options: nosniff
+x-frame-options: DENY
 x-vercel-cache: HIT
-x-vercel-id: gru1::xxxxx-xxxxxxxxxxxx-xxxxxxxxxxxx
-content-length: xxxxx
+x-vercel-id: gru1::ldlkm-1778251370483-3728067bd15a
+content-length: 11803
 ```
 
 ### 4.2 Validation Checklist

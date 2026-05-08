@@ -237,6 +237,12 @@ content-length: 11803
 
 ---
 
+## Automated Tools
+
+I developed a custom Python-based scanner to perform concurrent port analysis and SSL health checks. The tool is available as a GitHub Gist: https://gist.github.com/managustin/67e1a2dfade0ff97a21192f1c639e19a
+
+---
+
 ## Appendix: Full Nmap Output
 
 The complete `nmap` scan output is included below for reference and reproducibility:
